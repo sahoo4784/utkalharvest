@@ -1,8 +1,26 @@
 {
   "name": "vite_react_shadcn_ts",
+<<<<<<< HEAD
   "private": true,
   "version": "0.0.0",
   "type": "module",
+=======
+  "version": "0.0.0",
+  "private": true,
+  "description": "**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID",
+  "homepage": "https://github.com/sahoo4784/utkalharvest#readme",
+  "bugs": {
+    "url": "https://github.com/sahoo4784/utkalharvest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahoo4784/utkalharvest.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "eslint.config.js",
+>>>>>>> 5027e84066dc033d4cd40358c23bbb0cf3ca3d94
   "scripts": {
     "dev": "vite",
     "build": "vite build",
