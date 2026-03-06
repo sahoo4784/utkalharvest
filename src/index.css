@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 80% 8%;
+
+    --card: 140 20% 97%;
+    --card-foreground: 150 80% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 80% 8%;
+
+    --primary: 152 79% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 15% 94%;
+    --secondary-foreground: 152 79% 21%;
+
+    --muted: 140 10% 95%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 40 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 152 79% 21%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 152 79% 21%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 152 79% 21%;
+    --sidebar-accent: 152 60% 28%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 152 60% 28%;
+    --sidebar-ring: 40 70% 50%;
+
+    /* Custom tokens */
+    --primary-dark: 152 85% 15%;
+    --primary-light: 152 40% 90%;
+    --gold: 40 70% 50%;
+    --gold-light: 40 60% 92%;
+    --cream: 40 30% 96%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Tribal pattern border */
+.tribal-border {
+  background-image: repeating-linear-gradient(
+    90deg,
+    hsl(152 79% 21%) 0px,
+    hsl(152 79% 21%) 8px,
+    transparent 8px,
+    transparent 12px,
+    hsl(40 70% 50%) 12px,
+    hsl(40 70% 50%) 16px,
+    transparent 16px,
+    transparent 20px
+  );
+  height: 4px;
+}
+
+.tribal-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L25 10L20 20L15 10Z' fill='%230C5F36' opacity='0.04'/%3E%3Cpath d='M0 20L5 30L0 40L-5 30Z' fill='%230C5F36' opacity='0.04'/%3E%3Cpath d='M40 20L45 30L40 40L35 30Z' fill='%230C5F36' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
